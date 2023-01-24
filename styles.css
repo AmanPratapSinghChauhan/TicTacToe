@@ -1,0 +1,49 @@
+
+#col1{
+  display: flex;
+}
+#col2{
+display:flex;
+}
+#col3{
+  display: flex;
+
+}
+.box{
+  width:100px;
+  height: 100px;
+}
+#box1{
+border-right:5px solid black;
+border-bottom: 5px solid black;
+}
+#box2{
+border-right:5px solid black;
+border-bottom: 5px solid black;
+}
+#box3{
+border-bottom: 5px solid black;
+}#box4{
+  border-right:5px solid black;
+  border-bottom: 5px solid black;
+}#box5{
+  border-right:5px solid black;
+  border-bottom: 5px solid black;
+}#box6{
+  border-bottom: 5px solid black;
+}#box7{
+  border-right:5px solid black;
+}#box8{
+  border-right:5px solid black;
+}#box9{
+
+}
+img{
+  border:0px solid white;
+}
+div img{
+  height:60px;
+  width:60px;
+  margin-left: 20px;
+  margin-top: 20px;
+}

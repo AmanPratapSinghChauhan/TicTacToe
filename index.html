@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>TicTacToe</title>
+</head>
+
+<body>
+  <h1 id='base'>TicTacToe</h1>
+  <p id='root'></p>
+  <div id="col1">
+    <div id="box1" class="box" onClick="clic(1)" value='box1'>
+      <img  >
+    </div>
+    <div id="box2" class="box" onClick="clic(2)">
+      <img >
+    </div>
+    <div id="box3" class="box" onClick="clic(3)">
+      <img >
+    </div>
+  </div>
+  <div id='col2'>
+    <div id="box4" class="box" onClick="clic(4)">
+      <img >
+    </div>
+    <div id="box5" class="box" onClick="clic(5)">
+      <img >
+    </div>
+    <div id="box6" class="box" onClick="clic(6)">
+      <img >
+    </div>
+  </div>
+  <div id="col3">
+    <div id="box7" class="box" onClick="clic(7)">
+      <img >
+    </div>
+    <div id="box8" class="box" onClick="clic(8)">
+      <img >
+    </div>
+    <div id="box9" class="box" onClick="clic(9)">
+      <img >
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  var turn=0;
+  const arr=[];
+    function clic(value) {
+
+
+      if(turn==0){
+        document.querySelectorAll('#box' + value + ' img')[0].src = 'https://th.bing.com/th/id/OIP.t7ISuTAtDWA8ut-oRPj-3AHaHB?pid=ImgDet&rs=1';
+        turn=1;
+        document.getElementById('box'+value).removeAttribute('onClick');
+        arr[value-1]=1;
+      }
+      else{
+        document.querySelectorAll('#box' + value + ' img')[0].src = 'https://em.wattpad.com/b1560ac7a77348a2ccd4ac46f203ea9503579c46/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f38584f52386a6a4350724f5357773d3d2d3434383737313530342e313464363430323239356539373436623539383232353039333938362e706e67?s=fit&w=720&h=720';
+        turn=0;
+        document.getElementById('box'+value).removeAttribute('onClick');
+        arr[value-1]=0;
+      }
+      if((arr[0]==1 && arr[1]==1 && arr[2]==1)||(arr[0]==1 &&arr[4]==1 && arr[8]==1)||(arr[0]==1&& arr[3]==1&& arr[6]==1)||(arr[3]==1 && arr[4]==1 && arr[5]==1) ||( arr[6]==1 && arr[7]==1 && arr[8]==1)||(arr[1]==1&&arr[4]==1&&arr[7]==1)||(arr[2]==1&&arr[5]==1&&arr[8]==1)||(arr[2]==1&&arr[4]==1&&arr[6]==1)){
+        console.log('player 1 wins');
+        document.getElementById('root').innerHTML='Player 1 wins';
+        var val=[]
+        val.push(value);
+        console.log(val[0])
+      }
+      else if((arr[0]==0 && arr[1]==0 && arr[2]==0)||(arr[0]==0 &&arr[4]==0 && arr[8]==0)||(arr[0]==0&& arr[3]==0&& arr[6]==0)||(arr[3]==0 && arr[4]==0 && arr[5]==0) ||( arr[6]==0 && arr[7]==0 && arr[8]==0)||(arr[1]==0 &&arr[4]==0 &&arr[7]==0)||(arr[2]==0 &&arr[5]==0 &&arr[8]==0)||(arr[2]==0 &&arr[4]==0&&arr[6]==0)){
+        document.getElementById('root').innerHTML='Player 2 wins';
+      }
+
+
+    }
+  </script>
+
+</body>
+
+</html>
